@@ -1,0 +1,4 @@
+﻿  Змейка.cpp
+c:\users\василий\documents\github temp\snake\змейка.cpp(173): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\василий\documents\github temp\snake\змейка.cpp(226): warning C4018: <: несоответствие типов со знаком и без знака
+  Змейка.vcxproj -> C:\Users\Василий\Documents\Github temp\Snake\Debug\Змейка.exe

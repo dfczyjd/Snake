@@ -1,5 +1,6 @@
 // ќбразец кода, создающего окно
 
+#include "stdafx.h"
 #include <WinSDKVer.h>
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
@@ -25,7 +26,7 @@ HINSTANCE hInst;	// дескриптор текущиего экземпл€ра приложени€
 HWND hWnd;			// дескриптор главного окна
 vector<Cell> snake;
 Cell food, bonus;
-int dir = 0, level = 1, score = 0, count = 0, bonus_left = -1;
+int dir = 0, level = 1, score = 0, foodCount = 0, bonus_left = -1;
 bool game = true;
 
 // ќбъ€влени€ (прототипы) функций, включенных в этот модуль кода:
@@ -237,8 +238,8 @@ LRESULT CALLBACK WndProc(HWND hWnd,		// дескриптор окна, получившего сообщение
 				food.x = rand() % 20;
 				food.y = rand() % 20;
 				score += level;
-				++count;
-				if (bonus_left < 0 && count % 4 == 0)
+				++foodCount;
+				if (bonus_left < 0 && foodCount % 4 == 0)
 				{
 					bonus.x = rand() % 19;
 					bonus.y = rand() % 19;
